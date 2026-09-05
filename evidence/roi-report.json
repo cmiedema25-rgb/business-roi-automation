@@ -1,0 +1,17 @@
+{
+  "process_name": "overdue invoice follow-up",
+  "events_per_month": 200.0,
+  "minutes_per_event": 8.0,
+  "labor_cost_per_hour": 28.0,
+  "automation_build_cost": 2400.0,
+  "hours_saved_per_month": 26.6667,
+  "dollars_saved_per_month": 746.67,
+  "payback_months": 3.21,
+  "first_year_return_multiple": 3.73,
+  "formulas": {
+    "hours_saved_per_month": "events_per_month \u00d7 minutes_per_event / 60",
+    "dollars_saved_per_month": "hours_saved_per_month \u00d7 labor_cost_per_hour",
+    "payback_months": "automation_build_cost / dollars_saved_per_month",
+    "first_year_return_multiple": "(12 \u00d7 dollars_saved_per_month) / automation_build_cost"
+  }
+}

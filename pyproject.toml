@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "business-roi-automation"
+version = "1.0.0"
+description = "ROI calculator + Accounts Receivable reminder automation demo — Rework Digital portfolio proof"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "cmiedema25", email = "cmiedema25@gmail.com" }]
+dependencies = [
+  "gradio>=4.0.0",
+]
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+broi = "broi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,165 @@
+{
+  "demo": "accounts_receivable_reminder_workflow",
+  "mode": "dry-run",
+  "as_of": "2026-09-04",
+  "input_csv": "examples/open-invoices.csv",
+  "rules": {
+    "polite": "days_overdue >= 1 and < 15",
+    "firm": "days_overdue >= 15 and < 30",
+    "escalate": "days_overdue >= 30"
+  },
+  "summary": {
+    "total_reminders": 15,
+    "by_stage": {
+      "polite": 5,
+      "firm": 3,
+      "escalate": 7
+    },
+    "manual_minutes_per_reminder": 8,
+    "minutes_saved_vs_manual_calls": 120,
+    "hours_saved_vs_manual_calls": 2.0,
+    "note": "Synthetic dry-run; no email sent. Minutes assume hand-dial follow-up."
+  },
+  "action_queue": [
+    {
+      "invoice_id": "INV-1001",
+      "customer": "Acme Supplies Co",
+      "amount": 1250.0,
+      "days_overdue": 34,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1001 for $1250.00 is 34 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1003",
+      "customer": "Contoso Retail",
+      "amount": 2100.0,
+      "days_overdue": 46,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1003 for $2100.00 is 46 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1005",
+      "customer": "Adventure Works",
+      "amount": 3200.75,
+      "days_overdue": 81,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1005 for $3200.75 is 81 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1007",
+      "customer": "Tailspin Toys",
+      "amount": 1100.0,
+      "days_overdue": 30,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1007 for $1100.00 is 30 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1009",
+      "customer": "Southridge Video",
+      "amount": 1500.0,
+      "days_overdue": 65,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1009 for $1500.00 is 65 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1011",
+      "customer": "Blue Yonder Airlines",
+      "amount": 2400.0,
+      "days_overdue": 97,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1011 for $2400.00 is 97 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1015",
+      "customer": "City Power & Light",
+      "amount": 4100.0,
+      "days_overdue": 95,
+      "stage": "escalate",
+      "message_template": "[ILLUSTRATIVE] Escalation: invoice INV-1015 for $4100.00 is 95 day(s) overdue. Please contact AR to resolve immediately."
+    },
+    {
+      "invoice_id": "INV-1002",
+      "customer": "Northwind Traders",
+      "amount": 890.5,
+      "days_overdue": 25,
+      "stage": "firm",
+      "message_template": "[ILLUSTRATIVE] Follow-up: invoice INV-1002 for $890.50 is 25 day(s) overdue. Prompt payment is appreciated."
+    },
+    {
+      "invoice_id": "INV-1010",
+      "customer": "Proseware Corp",
+      "amount": 780.25,
+      "days_overdue": 15,
+      "stage": "firm",
+      "message_template": "[ILLUSTRATIVE] Follow-up: invoice INV-1010 for $780.25 is 15 day(s) overdue. Prompt payment is appreciated."
+    },
+    {
+      "invoice_id": "INV-1013",
+      "customer": "Humongous Insurance",
+      "amount": 1875.0,
+      "days_overdue": 20,
+      "stage": "firm",
+      "message_template": "[ILLUSTRATIVE] Follow-up: invoice INV-1013 for $1875.00 is 20 day(s) overdue. Prompt payment is appreciated."
+    },
+    {
+      "invoice_id": "INV-1004",
+      "customer": "Fabrikam LLC",
+      "amount": 450.0,
+      "days_overdue": 10,
+      "stage": "polite",
+      "message_template": "[ILLUSTRATIVE] Friendly reminder: invoice INV-1004 for $450.00 was due 10 day(s) ago. Please remit at your convenience."
+    },
+    {
+      "invoice_id": "INV-1006",
+      "customer": "Wide World Importers",
+      "amount": 675.0,
+      "days_overdue": 7,
+      "stage": "polite",
+      "message_template": "[ILLUSTRATIVE] Friendly reminder: invoice INV-1006 for $675.00 was due 7 day(s) ago. Please remit at your convenience."
+    },
+    {
+      "invoice_id": "INV-1008",
+      "customer": "Litware Inc",
+      "amount": 990.0,
+      "days_overdue": 3,
+      "stage": "polite",
+      "message_template": "[ILLUSTRATIVE] Friendly reminder: invoice INV-1008 for $990.00 was due 3 day(s) ago. Please remit at your convenience."
+    },
+    {
+      "invoice_id": "INV-1012",
+      "customer": "Coho Vineyard",
+      "amount": 560.0,
+      "days_overdue": 1,
+      "stage": "polite",
+      "message_template": "[ILLUSTRATIVE] Friendly reminder: invoice INV-1012 for $560.00 was due 1 day(s) ago. Please remit at your convenience."
+    },
+    {
+      "invoice_id": "INV-1014",
+      "customer": "Graphic Design Institute",
+      "amount": 320.0,
+      "days_overdue": 2,
+      "stage": "polite",
+      "message_template": "[ILLUSTRATIVE] Friendly reminder: invoice INV-1014 for $320.00 was due 2 day(s) ago. Please remit at your convenience."
+    }
+  ],
+  "invoices_loaded": 15,
+  "invoices_current_no_reminder": 0,
+  "webhook_notifier": {
+    "enabled": true,
+    "mode": "dry-run",
+    "payload_preview": {
+      "text": "[broi AR demo] 15 reminders queued (polite=5, firm=3, escalate=7)",
+      "destination": "optional Slack/webhook URL (not called)"
+    },
+    "note": "Optional AI Integration & APIs stub \u2014 no network call made."
+  },
+  "webhook_call": {
+    "sent": false,
+    "mode": "dry-run",
+    "webhook_url_configured": false,
+    "payload": {
+      "text": "[broi AR demo] 15 reminders queued (polite=5, firm=3, escalate=7)"
+    },
+    "note": "Offline stub \u2014 set BROI_WEBHOOK_URL and use --notify only in trusted envs."
+  }
+}

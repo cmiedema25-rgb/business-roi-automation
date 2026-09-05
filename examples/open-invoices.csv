@@ -1,0 +1,16 @@
+invoice_id,customer,amount,due_date
+INV-1001,Acme Supplies Co,1250.00,2026-08-01
+INV-1002,Northwind Traders,890.50,2026-08-10
+INV-1003,Contoso Retail,2100.00,2026-07-20
+INV-1004,Fabrikam LLC,450.00,2026-08-25
+INV-1005,Adventure Works,3200.75,2026-06-15
+INV-1006,Wide World Importers,675.00,2026-08-28
+INV-1007,Tailspin Toys,1100.00,2026-08-05
+INV-1008,Litware Inc,990.00,2026-09-01
+INV-1009,Southridge Video,1500.00,2026-07-01
+INV-1010,Proseware Corp,780.25,2026-08-20
+INV-1011,Blue Yonder Airlines,2400.00,2026-05-30
+INV-1012,Coho Vineyard,560.00,2026-09-03
+INV-1013,Humongous Insurance,1875.00,2026-08-15
+INV-1014,Graphic Design Institute,320.00,2026-09-02
+INV-1015,City Power & Light,4100.00,2026-06-01
